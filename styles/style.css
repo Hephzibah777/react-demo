@@ -88,6 +88,75 @@ th, td{
 }
 .mainclass p{
     position: relative;
-    left:0px;
+    right:40px;
     color: red;
+}
+
+.toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2px;
+
+}
+.toast{
+    width: 400px;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.toast::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anime 5s linear forwards;
+}
+
+@keyframes anime {
+    100%{
+        width: 0;
+    }
+}
+
+.citydiv{
+   margin-top: 2rem;
+   margin-right:30rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: flex-end;
+}
+.weather-container{
+    display: flex;
+    justify-content: center;
+}
+.sub-container{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    background-color: black;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    color: white;
+    padding:1rem;
+
+    
+}
+
+.first select{
+    padding:0.5rem;
+    border-radius: 1rem;
+    
 }
